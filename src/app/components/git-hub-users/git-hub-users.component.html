@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <h2>GitHub users browser</h2>
+
+  <input type="text" [(ngModel)]="searchName" (ngModelChange)="onSearch($event)" placeholder="Enter username">
+
+  <p *ngIf="searchName">Search: {{searchName}}</p>
+
+  <p *ngIf="isSearch">Searching...</p>
+
+  <div *ngIf="searchName">
+    <h3 *ngIf="!isSearch">Results</h3>
+
+    <ul>
+      <li *ngFor="let item of items$ | async">
+        <a [href]="item.html_url" target="_blank">
+          <img [src]="item.avatar_url">
+          <br>
+          <span>{{item.login}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

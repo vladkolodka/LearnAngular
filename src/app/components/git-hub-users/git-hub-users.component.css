@@ -1,0 +1,19 @@
+img {
+  width: 80px;
+  border: 10px double black;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+}
+
+.wrapper{
+  background-color: antiquewhite;
+  padding: 10px;
+  padding-top: 2px;
+}
